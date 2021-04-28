@@ -1,0 +1,11 @@
+Line 60: Class MSFlexGridLib.MSFlexGrid of control MGrid1 was not a loaded control class.
+Line 66: The property name _ExtentX in MGrid1 is invalid.
+Line 67: The property name _ExtentY in MGrid1 is invalid.
+Line 68: The property name _Version in MGrid1 is invalid.
+Line 69: The property name Cols in MGrid1 is invalid.
+Line 70: The property name FixedCols in MGrid1 is invalid.
+Line 71: The property name AllowBigSelection in MGrid1 is invalid.
+Line 72: The property name FocusRect in MGrid1 is invalid.
+Line 73: The property name SelectionMode in MGrid1 is invalid.
+Line 74: The property name AllowUserResizing in MGrid1 is invalid.
+Line 75: The property name FormatString in MGrid1 is invalid.

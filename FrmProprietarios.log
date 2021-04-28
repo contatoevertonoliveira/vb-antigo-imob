@@ -1,0 +1,12 @@
+Line 611: Class MSComctlLib.ImageList of control ImageList1 was not a loaded control class.
+Line 901: Class MSComDlg.CommonDialog of control CommonDialog1 was not a loaded control class.
+Line 614: The property name _ExtentX in ImageList1 is invalid.
+Line 615: The property name _ExtentY in ImageList1 is invalid.
+Line 617: The property name ImageWidth in ImageList1 is invalid.
+Line 618: The property name ImageHeight in ImageList1 is invalid.
+Line 619: The property name MaskColor in ImageList1 is invalid.
+Line 620: The property name _Version in ImageList1 is invalid.
+Line 627: The property name Images in ImageList1 is invalid.
+Line 904: The property name _ExtentX in CommonDialog1 is invalid.
+Line 905: The property name _ExtentY in CommonDialog1 is invalid.
+Line 906: The property name _Version in CommonDialog1 is invalid.

@@ -1,0 +1,204 @@
+Gerar Contrato:
+
+
+Dim wrdApp As Word.Application
+Dim wrdAppF As Word.Application
+Dim wrdSelection As Word.Selection
+Dim Nome_Arq As String
+Dim Meuerro$
+Dim X As Integer
+
+
+
+Sub Abrir_local_contrato()
+        On Error GoTo TrataErr_DB
+        CommonDialog1.CancelError = True
+        CommonDialog1.Filter = "CONTRATOS|*.DOC"
+        CommonDialog1.ShowOpen
+        Nome_Arq = CommonDialog1.FileName
+        Exit Sub
+TrataErr_DB:
+
+MsgBox "Inclusão Cancelada"
+Nome_Arq = ""
+'Meuerro = 1
+End Sub
+
+
+
+Sub Salvar_Word(nome As String)
+Meuerro = "salvando"
+Dim resposta%
+
+Nome_Arq = App.Path & nome
+Debug.Print Nome_Arq
+If MsgBox("Deseja Criar um Novo Documento com dados de Compradores/Inquilinos em " & Nome_Arq & "     ?", vbQuestion + vbYesNo, "ATENÇÃO...") = vbYes Then
+  
+Else
+    CommonDialog1.FileName = App.Path & "\dados\temp" & nome
+    CommonDialog1.ShowSave
+    Nome_Arq = CommonDialog1.FileName
+     'cria_diretorio (nome_pasta(Nome_Arq, 1))
+End If
+
+
+
+VER_CAMINHO:
+If Len(Dir(Nome_Arq)) Then
+    'Call mens1101
+     resposta = MsgBox("Deseja Subscrever o Arquivo Existente?", vbQuestion + vbYesNoCancel, "ATENÇÃO...")
+       Select Case resposta
+           Case 6   ' vbyes
+                  'Kill Nome_Arq
+               If apaga_arq_word(Nome_Arq) = False Then
+                GoTo VER_CAMINHO
+               End If
+           Case 7    ' vbno
+                    SALVA_CONTRATO
+                    GoTo VER_CAMINHO
+           Case 2   ' CANCEL
+                    Screen.MousePointer = 0
+                    Set wrdApp = Nothing
+                   ' wrdapp.Quit
+                    Exit Sub
+                    
+       End Select
+Else
+
+
+End If
+Debug.Print Nome_Arq
+wrdApp.ActiveDocument.SaveAs (Nome_Arq)
+
+wrdApp.Quit
+
+Meuerro = "Finalizando"
+Screen.MousePointer = 0
+MsgBox "Inserido Novos Dados de Compradores ou Inquilinos ao Contrato", vbInformation
+
+'wrdApp.Visible = True
+
+'wrdApp.WindowState =wdWindowStateMaximize
+
+
+Set wrdApp = Nothing
+
+'Me.Caption = "Contrato"
+
+Exit Sub
+End Sub
+
+
+
+Sub SALVA_CONTRATO()
+On Error GoTo semarquivo
+CommonDialog1.CancelError = True
+
+CommonDialog1.FileName = Nome_Arq
+CommonDialog1.ShowSave
+Nome_Arq = CommonDialog1.FileName
+
+
+Exit Sub
+
+semarquivo:
+If Err.Number = 32755 Then
+   
+    MsgBox "Selecione o local para salvar o arquivo: " & Nome_Arq
+  
+Else
+    MsgBox "erro Desconhecido ao abrir arquivo " & Nome_Arq
+End If
+End Sub
+
+
+
+Function apaga_arq_word(nome As String) As Boolean
+On Error GoTo erro_apaga
+
+'Kill Nome_Arq
+apaga_arq_word = True
+
+Exit Function
+erro_apaga:
+apaga_arq_word = False
+
+MsgBox "Não foi Posivel substituir o arquivo existente."
+End Function
+
+
+
+Sub trata_erro_Word()
+'On Error GoTo erro2
+Screen.MousePointer = 0
+Set wrdApp = Nothing
+Set wrdSelection = Nothing
+
+'Me.Caption = " Contrato"
+'erro2:
+'MsgBox "Ocorreu um erro durante o processamento " & " - Erro numero : " & Err.Number & "   " & Err.Description & "   " & Meuerro
+End Sub
+
+
+
+Private Sub cmdContrato_Click()
+'On Error Resume Next
+'preenche contrato do word
+    Dim ObjWord As New Word.Application
+    Me.MousePointer = 11
+    ObjWord.Visible = False
+    
+    If MsgBox("Deseja Autopreencher um Contrato de Locação com Dados do Proprietário do Imóvel?", vbQuestion + vbYesNo) = vbYes Then
+    
+    CopyFile "C:\Programa Imobiliária\Contratos\Contrato.DOC", "C:\Programa Imobiliária\Contratos\" & txtproprietario & ".doc"
+    txtcontrato = "C:\Programa Imobiliária\Contratos\" & txtproprietario & ".doc"
+    ObjWord.Documents.Open ("C:\Programa Imobiliária\Contratos\" & txtproprietario & ".doc")
+    
+    Call Substitui_Var1("@Nome", txtproprietario, ObjWord)
+    Call Substitui_Var1("@Nacionalidade", txtnacional, ObjWord)
+    Call Substitui_Var1("@Profissao", TxtProfissao, ObjWord)
+    Call Substitui_Var1("@Estadocivil", CobEstadoCivil, ObjWord)
+    Call Substitui_Var1("@regimeProprie", txtregime, ObjWord)
+    Call Substitui_Var1("@RgProprietario", txtRG, ObjWord)
+    Call Substitui_Var1("@cpfProprietario", txtcpf, ObjWord)
+    Call Substitui_Var1("@conjugeProprietario", txtconjuge, ObjWord)
+    Call Substitui_Var1("@nacionalconjuge", txtconjugeNacional, ObjWord)
+    Call Substitui_Var1("@ProfissaoConjuge", txtProfissaoConjuge, ObjWord)
+    Call Substitui_Var1("@rgconjugeProprietario", txtrgConjuge, ObjWord)
+    Call Substitui_Var1("@cpjConjugeProprietario", txtcpfconjuge, ObjWord)
+    Call Substitui_Var1("@Notificação ", txtruanot, ObjWord)
+    Call Substitui_Var1("@Numero", txtnnot, ObjWord)
+    Call Substitui_Var1("@Bairro", txtbairronotifi, ObjWord)
+    Call Substitui_Var1("@Cidade", txtcidadenotifi, ObjWord)
+    Call Substitui_Var1("@Estado", txtest, ObjWord)
+    Call Substitui_Var1("@Nomefinal", txtproprietario, ObjWord)
+    
+    ObjWord.ActiveDocument.Save
+    ObjWord.Quit
+    Set ObjWord = Nothing
+    Me.MousePointer = 0
+    MsgBox "Contrato Gerado com Sucesso em: " & vbCrLf & "C:\Programa Imobiliária\Contratos\" & txtproprietario & ".doc", vbInformation, " Contrato Gerado "
+  
+   
+    End If
+  
+   ' ShellExecute hwnd, vbNullString, ("C:\Meus Documentos\Locacao\" & txtproprietario & ".DOC"), vbNullString, vbNullString, SW_SHOW
+End Sub
+
+
+
+Private Sub Substitui_Var1(Header As String, Data As String, oWord As Object)
+    On Error Resume Next
+    With oWord.Selection.Find
+        .ClearFormatting
+        .Text = Header
+        .Execute Forward:=True
+    End With
+    Clipboard.Clear
+    Clipboard.SetText (Data)
+    oWord.Selection.Paste
+    Clipboard.Clear
+End Sub
+
+
+

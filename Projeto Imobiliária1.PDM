@@ -1,0 +1,143 @@
+[Root]
+Most Recent Package=Instalação Projeto Imobiliária
+
+
+[Package|Instalação Projeto Imobiliária|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Programa Imobiliária\Programa
+
+[Package|Instalação Projeto Imobiliária|Configure DAO ISAMs]
+Applicable=Yes
+Jet 2.x=Yes
+
+[Package|Instalação Projeto Imobiliária|Configure DAO ODBC]
+JetWorkspace=Yes
+ODBCDirect=Yes
+
+[Package|Instalação Projeto Imobiliária|Files Found]
+
+[Package|Instalação Projeto Imobiliária|Files Released]
+
+[Package|Instalação Projeto Imobiliária|Missing Dependency Information]
+C:\WINDOWS\SYSTEM32\MSSTDFMT.DLL=
+C:\Arquivos de programas\Microsoft Office\Office10\MSWORD.OLB=
+
+[Package|Instalação Projeto Imobiliária|Out-of-Date Dependency Information]
+C:\WINDOWS\SYSTEM32\MSRDO20.DLL=
+C:\WINDOWS\SYSTEM32\comdlg32.ocx=
+C:\WINDOWS\SYSTEM32\scrrun.dll=
+
+[Package|Instalação Projeto Imobiliária|Files Added]
+
+[Package|Instalação Projeto Imobiliária|Files Removed]
+
+[Package|Instalação Projeto Imobiliária|Files In Project]
+C:\Programa Imobiliária\Projeto Imobiliária1.exe=Yes
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=Yes
+C:\WINDOWS\SYSTEM32\oleaut32.dll=Yes
+C:\WINDOWS\SYSTEM32\olepro32.dll=Yes
+C:\WINDOWS\SYSTEM32\asycfilt.dll=Yes
+C:\WINDOWS\SYSTEM32\stdole2.tlb=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\SYSTEM32\scrrun.dll=Yes
+C:\WINDOWS\SYSTEM32\msvcrt.dll=Yes
+C:\Arquivos de programas\Microsoft Office\Office10\MSWORD.OLB=Yes
+C:\Arquivos de programas\Arquivos comuns\Microsoft Shared\DAO\DAO350.DLL=Yes
+C:\WINDOWS\SYSTEM32\Msjet35.dll=Yes
+C:\WINDOWS\SYSTEM32\Msjter35.dll=Yes
+C:\WINDOWS\SYSTEM32\Msjint35.dll=Yes
+C:\WINDOWS\SYSTEM32\vbajet32.dll=Yes
+C:\WINDOWS\SYSTEM32\expsrv.dll=Yes
+C:\WINDOWS\SYSTEM32\Msrd2x35.dll=Yes
+C:\WINDOWS\SYSTEM32\Msrepl35.dll=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\WINDOWS\SYSTEM32\Vb5db.dll=Yes
+C:\WINDOWS\SYSTEM32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\SYSTEM32\comdlg32.ocx=Yes
+C:\WINDOWS\SYSTEM32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\SYSTEM32\DBLIST32.OCX=Yes
+C:\WINDOWS\SYSTEM32\MSDATGRD.OCX=Yes
+C:\WINDOWS\SYSTEM32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\SYSTEM32\MSMASK32.OCX=Yes
+C:\WINDOWS\SYSTEM32\TABCTL32.OCX=Yes
+C:\WINDOWS\SYSTEM32\MSRDO20.DLL=Yes
+C:\WINDOWS\SYSTEM32\RDOCURS.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Instalação Projeto Imobiliária|Configure Registry Files]
+Applicable=No
+
+[Package|Instalação Projeto Imobiliária|Configure Remote Servers]
+Applicable=No
+
+[Package|Instalação Projeto Imobiliária|Install Locations]
+C:\Programa Imobiliária\Projeto Imobiliária1.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\msvcrt.dll=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Office\Office10\MSWORD.OLB=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\SYSTEM32\Msjet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\Msjter35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\Msjint35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\vbajet32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\expsrv.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\Msrd2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\Msrepl35.dll=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\Vb5db.dll=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\DBLIST32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MSRDO20.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\RDOCURS.DLL=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Instalação Projeto Imobiliária|Configure Shared Files]
+Applicable=Yes
+C:\Programa Imobiliária\Projeto Imobiliária1.exe=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+
+[Package|Instalação Projeto Imobiliária|Distribution]
+Type=single
+Size=
+Title=Projeto Imobiliária
+
+[Package|Instalação Projeto Imobiliária|IconGroups]
+Group0=Projeto Imobiliária
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Instalação Projeto Imobiliária|Projeto Imobiliária]
+Icon1="Projeto Imobiliária1.exe"
+Title1=Projeto Imobiliária
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Instalação Projeto Imobiliária|Package]
+PackageFolder=C:\Programa Imobiliária\Programa
+ProjectFolder=C:\Programa Imobiliária
+ServerSideCab=
+File1=C:\Programa Imobiliária\Programa\setup.exe
+File2=C:\Programa Imobiliária\Programa\Setup.Lst
+File3=C:\Programa Imobiliária\Programa\Projeto Imobiliária1.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

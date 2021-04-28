@@ -1,0 +1,16 @@
+Line 119: Class MSComctlLib.ListView of control lstFaturas was not a loaded control class.
+Line 125: The property name _ExtentX in lstFaturas is invalid.
+Line 126: The property name _ExtentY in lstFaturas is invalid.
+Line 127: The property name View in lstFaturas is invalid.
+Line 128: The property name LabelWrap in lstFaturas is invalid.
+Line 129: The property name HideSelection in lstFaturas is invalid.
+Line 130: The property name FullRowSelect in lstFaturas is invalid.
+Line 131: The property name GridLines in lstFaturas is invalid.
+Line 132: The property name HotTracking in lstFaturas is invalid.
+Line 133: The property name _Version in lstFaturas is invalid.
+Line 138: The property name NumItems in lstFaturas is invalid.
+Line 142: The property name ColumnHeader(1) in lstFaturas is invalid.
+Line 147: The property name ColumnHeader(2) in lstFaturas is invalid.
+Line 152: The property name ColumnHeader(3) in lstFaturas is invalid.
+Line 157: The property name ColumnHeader(4) in lstFaturas is invalid.
+Line 162: The property name ColumnHeader(5) in lstFaturas is invalid.
